@@ -10,7 +10,7 @@ export class RecipeService {
 		new Recipe(
 			'Tasty Schnitzel',
 			'A super tasty Schnitzel - just awesome!',
-			'https://i.pinimg.com/222x/a3/4c/08/a34c08589834ffce5366388a89ebeb27.jpg',
+			'https://www.toprezepte.eu/recipe/6/Wiener-Schnitzel-60993d7a49246.jpg',
 			[
 				new Ingredient('Meat', 1),
 				new Ingredient('Panko', 1),
@@ -22,7 +22,7 @@ export class RecipeService {
 		new Recipe(
 			'Big Fat Burger',
 			'What else you need to  say?',
-			'https://cdn.donmai.us/original/c7/a8/c7a8635753999ac88f674ef2043668e1.jpg',
+			'https://image.brigitte.de/12444002/t/dg/v3/w960/r1/-/burger-vom-grill.jpg',
 			[
 				new Ingredient('Buns', 2),
 				new Ingredient('Patty', 2),
