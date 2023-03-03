@@ -9,35 +9,6 @@ import { Subject } from 'rxjs';
 export class RecipeService {
 	recipesChanged = new Subject<Recipe[]>();
 
-	// private recipes: Recipe[] = [
-	// 	new Recipe(
-	// 		'Tasty Schnitzel',
-	// 		'A super tasty Schnitzel - just awesome!',
-	// 		'https://www.toprezepte.eu/recipe/6/Wiener-Schnitzel-60993d7a49246.jpg',
-	// 		[
-	// 			new Ingredient('Meat', 1),
-	// 			new Ingredient('Panko', 1),
-	// 			new Ingredient('Eggs', 2),
-	// 			new Ingredient('Flour', 1),
-	// 			new Ingredient('French Fries', 20)
-	// 		]
-	// 	),
-	// 	new Recipe(
-	// 		'Big Fat Burger',
-	// 		'What else you need to  say?',
-	// 		'https://image.brigitte.de/12444002/t/dg/v3/w960/r1/-/burger-vom-grill.jpg',
-	// 		[
-	// 			new Ingredient('Buns', 2),
-	// 			new Ingredient('Patty', 2),
-	// 			new Ingredient('Salad', 2),
-	// 			new Ingredient('Tomato', 1),
-	// 			new Ingredient('Onion', 1),
-	// 			new Ingredient('Jalapeños', 4),
-	// 			new Ingredient('Mayo', 1)
-	// 		]
-	// 	)
-	// ];
-
 	private recipes: Recipe[] = [];
 
 	constructor(private shoppingListService: ShoppingListService) {}
