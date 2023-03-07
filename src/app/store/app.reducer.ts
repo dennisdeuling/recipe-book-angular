@@ -1,12 +1,14 @@
 import { ActionReducer, ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { routerReducer } from '@ngrx/router-store';
 import { authReducer } from '../auth/store/auth.reducer';
+import { recipeReducer } from '../recipes/store/recipe.reducer';
 
 export type appState = {};
 
 export const appReducer: ActionReducerMap<appState> = {
 	router: routerReducer,
-	auth: authReducer
+	auth: authReducer,
+	recipes: recipeReducer
 };
 
 export function logger(reducer: ActionReducer<any>): ActionReducer<any> {

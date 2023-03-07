@@ -2,12 +2,12 @@ import { createReducer, on } from '@ngrx/store';
 import { authenticationSuccess, autoLogin, loginStart, logout, signupStart } from './auth.actions';
 import { User } from '../user.model';
 
-export type stateType = {
+export type authState = {
 	user: User;
 	authError: string;
 };
 
-const initialState: stateType = {
+const initialState: authState = {
 	user: null,
 	authError: null
 };

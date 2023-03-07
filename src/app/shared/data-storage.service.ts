@@ -1,16 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { RecipeService } from '../recipes/recipe.service';
-import { Recipe } from '../recipes/recipe.model';
-import { map, tap } from 'rxjs';
-import { AuthService } from '../auth/auth.service';
+import { Injectable } from "@angular/core";
+import { HttpClient } from "@angular/common/http";
+import { RecipeService } from "../recipes/recipe.service";
+import { map, tap } from "rxjs";
+import { AuthService } from "../auth/auth.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class DataStorageService {
   private databaseUrl =
-    'https://angular-recipe-book-a912b-default-rtdb.europe-west1.firebasedatabase.app/recipes.json';
+    "https://angular-recipe-book-a912b-default-rtdb.europe-west1.firebasedatabase.app/recipes.json";
 
   constructor(private http: HttpClient, private recipeService: RecipeService, private authService: AuthService) {
   }
@@ -23,7 +22,8 @@ export class DataStorageService {
   }
 
   fetchRecipes() {
-    return this.http.get<Recipe[]>(
+    // FIXME: Response changed to any
+    return this.http.get<any>(
       this.databaseUrl
     )
       .pipe(

@@ -13,6 +13,7 @@ import { CoreModule } from './core.module';
 import { AppRoutingModule } from './app-routing.module';
 import { appReducer, metaReducers } from './store/app.reducer';
 import { AuthEffects } from './auth/store/auth.effects';
+import { RecipeEffects } from './recipes/store/recipe.effects';
 
 @NgModule({
 	declarations: [AppComponent, HeaderComponent],
@@ -25,7 +26,7 @@ import { AuthEffects } from './auth/store/auth.effects';
 		StoreModule.forRoot(appReducer, {
 			metaReducers
 		}),
-		EffectsModule.forRoot([AuthEffects]),
+		EffectsModule.forRoot([AuthEffects, RecipeEffects]),
 		StoreRouterConnectingModule.forRoot({
 			stateKey: 'router',
 			routerState: RouterState.Minimal
